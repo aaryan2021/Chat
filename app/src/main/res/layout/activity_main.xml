@@ -26,13 +26,22 @@
           android:textSize="@dimen/_14sdp" />
 
       <ImageView
-          android:layout_width="@dimen/_30sdp"
-          android:layout_height="@dimen/_30sdp"
+          android:id="@+id/setting"
+          android:layout_width="@dimen/_25sdp"
+          android:layout_height="@dimen/_25sdp"
+          android:layout_toLeftOf="@+id/logout"
+          android:layout_marginTop="@dimen/_5sdp"
+          android:layout_marginEnd="@dimen/_10sdp"
+          android:src="@drawable/ic_baseline_settings_24" />
+
+      <ImageView
           android:id="@+id/logout"
+          android:layout_width="@dimen/_25sdp"
+          android:layout_height="@dimen/_25sdp"
           android:layout_alignParentEnd="true"
           android:layout_marginTop="@dimen/_5sdp"
           android:layout_marginEnd="@dimen/_10sdp"
-          android:src="@drawable/ic_baseline_logout_24" />
+          android:src="@drawable/ic_baseline_power_settings_new_24" />
   </RelativeLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"

@@ -33,6 +33,7 @@ class Registration : BaseActivity() {
         initFireBase()
         newUser.setOnClickListener(View.OnClickListener {
             startActivity(Intent(this,Login::class.java))
+            finish()
         })
 
         signUp.setOnClickListener(View.OnClickListener {
@@ -105,6 +106,7 @@ class Registration : BaseActivity() {
                                                 if(it.isSuccessful){
                                                     progress!!.dismissSweet()
                                                     startActivity(Intent(this@Registration,MainActivity::class.java))
+                                                    finish()
                                                 }else{
                                                     progress!!.dismissSweet()
                                                     Toast.makeText(this@Registration,"Error while creating user",Toast.LENGTH_LONG).show()
@@ -123,6 +125,7 @@ class Registration : BaseActivity() {
                                     if(it.isSuccessful){
                                         progress!!.dismissSweet()
                                         startActivity(Intent(this@Registration,MainActivity::class.java))
+                                        finish()
                                     }else{
                                         progress!!.dismissSweet()
                                         Toast.makeText(this@Registration,"Error while creating user",Toast.LENGTH_LONG).show()

@@ -47,17 +47,23 @@ class MainActivity : BaseActivity() {
         logout.setOnClickListener(View.OnClickListener {
             logout()
         })
+        setting.setOnClickListener(View.OnClickListener {
+            startActivity(Intent(this,Setting::class.java))
+            finish()
+        })
 
 
     }
     fun populateData(){
+        var auth=FirebaseAuth.getInstance()
         progress!!.showSweetDialog()
         var reference=firebaseDatabase.getReference().child("user")
         reference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 for(snap in dataSnapshot.children){
                     var user=snap.getValue(users::class.java)
-                    userArraylists.add(user!!)
+                    if(!auth.currentUser!!.uid.equals(user!!.uid))
+                     userArraylists.add(user!!)
                 }
                 adapter.notifyDataSetChanged()
                 progress!!.dismissSweet()

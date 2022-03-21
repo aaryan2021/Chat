@@ -21,6 +21,7 @@ class Login : BaseActivity() {
         init()
         newUser.setOnClickListener(View.OnClickListener {
             startActivity(Intent(this,Registration::class.java))
+            finish()
         })
         btnsignIn.setOnClickListener(View.OnClickListener {
             progress!!.showSweetDialog()
@@ -50,6 +51,7 @@ class Login : BaseActivity() {
                     if(it.isSuccessful){
                         progress!!.dismissSweet()
                         startActivity(Intent(this@Login,MainActivity::class.java))
+                        finish()
                     }else{
                         progress!!.dismissSweet()
                         Toast.makeText(this@Login,"some thing went wrong",Toast.LENGTH_LONG).show()

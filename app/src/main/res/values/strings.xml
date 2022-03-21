@@ -31,4 +31,5 @@
     <string name="no_internet">No Internet</string>
     <string name="type_your_message">Type your message..</string>
     <string name="message_error">Message should not be blank</string>
+    <string name="status">Hey there i am using whatsapp</string>
 </resources>

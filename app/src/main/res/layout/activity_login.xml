@@ -15,7 +15,7 @@
             android:layout_width="@dimen/_60sdp"
             android:layout_height="@dimen/_60sdp"
             android:layout_gravity="center"
-            android:src="@drawable/backgroundwithicon"/>
+            android:src="@drawable/chat"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -71,5 +71,5 @@
         android:layout_marginEnd="@dimen/_10sdp"
         android:layout_marginBottom="@dimen/_10sdp"
         android:text="@string/new_user"
-        android:textSize="@dimen/_14sdp" />
+        android:textSize="@dimen/_12sdp" />
 </RelativeLayout>

@@ -7,7 +7,7 @@
 
     </item>
 
-    <item android:drawable="@drawable/ic_baseline_chat_bubble_24"
+    <item android:drawable="@drawable/chat"
         android:bottom="@dimen/_2sdp"
         android:left="@dimen/_2sdp"
         android:right="@dimen/_2sdp"
