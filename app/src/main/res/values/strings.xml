@@ -11,6 +11,9 @@
     <string name="new_user">I am new user? Click here.</string>
     <string name="alreadyuser">Already have an Account?</string>
     <string name="create_account">Create Account</string>
+    <string name="cancel">Cancel</string>
+    <string name="submit">Submit</string>
+    <string name="current_password">Current Password</string>
 
     <string name="name_error">Name can not be empty</string>
     <string name="email_error">Email can not be empty</string>
@@ -19,6 +22,7 @@
     <string name="Password_does_not_match">Password and Confirm Password does not match.</string>
     <string name="password_length_error">password lengeth should be greate then 6 char.</string>
     <string name="users">Users</string>
+    <string name="profile">Profile</string>
     <string name="Logout_message">Are you sure you want to logout from the app?</string>
     <string name="logout">Logout</string>
     <string name="no">No</string>
@@ -32,4 +36,5 @@
     <string name="type_your_message">Type your message..</string>
     <string name="message_error">Message should not be blank</string>
     <string name="status">Hey there i am using whatsapp</string>
+    <string name="change_password">Change Password</string>
 </resources>

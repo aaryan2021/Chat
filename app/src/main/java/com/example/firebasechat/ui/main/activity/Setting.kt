@@ -1,10 +1,16 @@
 package com.example.firebasechat.ui.main.activity
 
+import android.app.Dialog
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.ViewGroup
+import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import com.example.firebasechat.R
 import com.example.firebasechat.data.model.users
@@ -16,6 +22,8 @@ import com.google.firebase.storage.FirebaseStorage
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_registration.*
 import kotlinx.android.synthetic.main.activity_setting.*
+import kotlinx.android.synthetic.main.reset_password_dialog.*
+import org.w3c.dom.Text
 
 class Setting : BaseActivity() {
     lateinit var firebaseDatabase:FirebaseDatabase
@@ -56,6 +64,10 @@ class Setting : BaseActivity() {
             override fun onCancelled(error: DatabaseError) {
             }
 
+        })
+
+        updatePassword.setOnClickListener(View.OnClickListener {
+            showResetDialog()
         })
 
         submit.setOnClickListener(View.OnClickListener {
@@ -116,4 +128,31 @@ class Setting : BaseActivity() {
             }
         }
     }
+
+    private fun showResetDialog() {
+        val dialog = Dialog(this)
+        dialog.setContentView(R.layout.reset_password_dialog)
+        dialog.getWindow()?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        var btncancel=dialog.findViewById<TextView>(R.id.cancel)
+        var ResetPassword=dialog.findViewById<TextView>(R.id.ResetPassword)
+        var email=dialog.findViewById<EditText>(R.id.email)
+        btncancel.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        ResetPassword.setOnClickListener {
+            ResetPasswordServiceCall(email.text.toString())
+            dialog.dismiss()
+        }
+
+        dialog.show()
+    }
+    fun ResetPasswordServiceCall(email: String) {
+       firebaseAuth.sendPasswordResetEmail(email).addOnCompleteListener(OnCompleteListener {
+           if(it.isSuccessful){
+               Toast.makeText(this@Setting,"Please check your mail",Toast.LENGTH_LONG).show()
+           }
+       })
+    }
+
 }

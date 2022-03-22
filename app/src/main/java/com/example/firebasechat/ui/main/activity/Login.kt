@@ -46,6 +46,7 @@ class Login : BaseActivity() {
             progress!!.dismissSweet()
             password.setError(getString(R.string.password_length_error))
         }else{
+
             auth.signInWithEmailAndPassword(email.text.toString(),password.text.toString()).addOnCompleteListener(
                 OnCompleteListener {
                     if(it.isSuccessful){
