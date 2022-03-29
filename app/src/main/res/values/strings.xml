@@ -14,6 +14,7 @@
     <string name="cancel">Cancel</string>
     <string name="submit">Submit</string>
     <string name="current_password">Current Password</string>
+    <string name="proceed">Proceed</string>
 
     <string name="name_error">Name can not be empty</string>
     <string name="email_error">Email can not be empty</string>
@@ -22,6 +23,8 @@
     <string name="Password_does_not_match">Password and Confirm Password does not match.</string>
     <string name="password_length_error">password lengeth should be greate then 6 char.</string>
     <string name="users">Users</string>
+    <string name="Groups">Groups</string>
+    <string name="select_participant">Select Participants</string>
     <string name="profile">Profile</string>
     <string name="Logout_message">Are you sure you want to logout from the app?</string>
     <string name="logout">Logout</string>

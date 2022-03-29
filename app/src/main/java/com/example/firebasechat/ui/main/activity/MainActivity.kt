@@ -52,6 +52,10 @@ class MainActivity : BaseActivity() {
             finish()
         })
 
+        groups.setOnClickListener(View.OnClickListener {
+            startActivity(Intent(this,GroupList::class.java))
+        })
+
 
     }
     fun populateData(){

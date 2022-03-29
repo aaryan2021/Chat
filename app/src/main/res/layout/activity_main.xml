@@ -24,6 +24,14 @@
           android:layout_marginTop="@dimen/_10sdp"
           android:text="@string/users"
           android:textSize="@dimen/_14sdp" />
+      <ImageView
+          android:id="@+id/groups"
+          android:layout_width="@dimen/_25sdp"
+          android:layout_height="@dimen/_25sdp"
+          android:layout_marginTop="@dimen/_5sdp"
+          android:layout_marginEnd="@dimen/_10sdp"
+          android:layout_toLeftOf="@+id/setting"
+          android:src="@drawable/ic_baseline_groups_24" />
 
       <ImageView
           android:id="@+id/setting"
